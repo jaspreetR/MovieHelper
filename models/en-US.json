@@ -1,0 +1,118 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "movie helper",
+      "intents": [
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "MovieDescriptionIntent",
+          "slots": [
+            {
+              "name": "Movie",
+              "type": "AMAZON.Movie"
+            }
+          ],
+          "samples": [
+            "what {Movie} is about",
+            "tell me about more {Movie} ",
+            "I would like to know more about {Movie}",
+            "Give me a summary of {Movie}",
+            "What is the story of {Movie}",
+            "Describe {Movie} plot",
+            "Describe {Movie}",
+            "What is {Movie} about"
+          ]
+        },
+        {
+          "name": "MovieReleaseYearIntent",
+          "slots": [
+            {
+              "name": "Movie",
+              "type": "AMAZON.Movie"
+            }
+          ],
+          "samples": [
+            "What is the release year of {Movie}",
+            "On what date was {Movie} created",
+            "What year was {Movie} made",
+            "When was {Movie} released"
+          ]
+        },
+        {
+          "name": "MovieProviderIntent",
+          "slots": [
+            {
+              "name": "Movie",
+              "type": "AMAZON.Movie"
+            },
+            {
+              "name": "Provider",
+              "type": "Provider"
+            }
+          ],
+          "samples": [
+            "Am I allowed to watch {Movie} on {Provider}",
+            "Will I be able to view {Movie} from {Provider}",
+            "Does {Provider} allow me to access {Movie}",
+            "Am I able to stream {Movie} on {Provider}",
+            "Is it possible to get {Movie} on {Provider}",
+            "Can I get {Movie} on {Provider}",
+            "Is {Movie} available on {Provider}"
+          ]
+        },
+        {
+          "name": "MovieRuntimeIntent",
+          "slots": [
+            {
+              "name": "Movie",
+              "type": "AMAZON.Movie"
+            }
+          ],
+          "samples": [
+            "After what period of time does {Movie} end",
+            "After how long does {Movie} finish",
+            "Tell me the duration of {Movie}",
+            "How long does {Movie} last for",
+            "What is the runtime of {Movie}",
+            "How long is {Movie}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Amazon Video",
+                "synonyms": [
+                  "Amazon"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Netflix"
+              }
+            }
+          ],
+          "name": "Provider"
+        }
+      ]
+    }
+  }
+}
